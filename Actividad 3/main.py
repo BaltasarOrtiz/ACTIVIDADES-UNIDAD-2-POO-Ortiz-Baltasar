@@ -22,7 +22,7 @@ if __name__== '__main__':
         hum = line[3]
         pres = line[4]
         lista[dia-1][hora-1] = registro(float(temp), float(hum), float(pres))
-    
+    archivo.close()
     
     llamarMenu(lista)
     
