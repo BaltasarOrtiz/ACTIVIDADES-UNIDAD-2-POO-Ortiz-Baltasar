@@ -22,10 +22,11 @@ class Viajero:
         return(self.__millasAcum+cantM)
     
     def canjearMillas(self, cantCanjeM):
+        millas=0
         if(cantCanjeM<=self.__millasAcum):
             return(self.__millasAcum-cantCanjeM)
         else:
-            return("Error en la operacion")
+            return millas
     
     def getNumViajero(self):
         return(self.__numeroViajero)

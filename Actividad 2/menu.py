@@ -9,7 +9,7 @@ def llamarMenu(lista):
     while numiD != 0:
             
         b = busqueda(lista, numiD)
-        print("Esta es la posicion"+str(b))
+        print("Esta es la posicion "+str(b))
         while not salir:
                 
             print ("1. Consultar Cantidad de Millas - Opcion 1")
@@ -29,7 +29,10 @@ def llamarMenu(lista):
                 print(lista[b].acumularMillas())
             elif opcion == 3:
                 print("Canjear Millas ")
-                print(lista[b].canjearMillas())
+                if(lista[b].canjearMillas())==0:
+                    print("No fue posible cambiar las millas")
+                else: 
+                    print("Millas actualizadas")
             elif opcion == 4:
                 salir = True
             else:
@@ -37,7 +40,6 @@ def llamarMenu(lista):
              
         print ("Fin")
           
-    
 def pedirNumeroEntero():
     correcto=False
     num=0
@@ -53,4 +55,4 @@ def busqueda(lista, numiD):
     for i in range(len(lista)):
         if (lista[i].getNumViajero() == numiD):
             return i
-        
+       
