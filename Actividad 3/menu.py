@@ -82,9 +82,11 @@ def promedioT(lista):
 
 #3.3.        Dado un número de día listar los valores de las tres variables para cada hora del día dado. El listado debe tener el siguiente formato.
 def listado(lista, dia):
-    print("Hora Temperatura Humedad Presion")
+    print ("DIA:---{}--- ".format(dia))
+    print ("Hora\tTemperatura\tHumedad\t\tPresion\n")
     for j in range(24):
-        print("{} {} {} {}".format(j, lista[dia-1][j].getTemp(), lista[dia-1][j].getHum(), lista[dia-1][j].getPres()))
+        print ("{}\t{}\t\t{}\t\t{}\n".format(j+1,lista[dia-1][j].getTemp(),lista[dia-1][j].getHum(),lista[dia-1][j].getPres()))
+        #print("{} {} {} {}".format(j, lista[dia-1][j].getTemp(), lista[dia-1][j].getHum(), lista[dia-1][j].getPres()))
      
 
 #MENU

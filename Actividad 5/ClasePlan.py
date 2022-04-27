@@ -8,10 +8,10 @@ class PlanAhorro:
     __cantCuotaPaga: int = 0 
 
     def __init__(self, codP, model, ver, val):
-        self.__codPlan = int(codP)
+        self.__codPlan = codP
         self.__modelo = model
         self.__versionVH = ver
-        self.__valorVH = float(val)
+        self.__valorVH = val
 
     def getCodPlan(self):
         return self.__codPlan
@@ -22,11 +22,8 @@ class PlanAhorro:
     def getVer(self):
         return self.__versionVH
 
-    def getCuotaPagar(self):
-        return self.__cantCuotaPaga
-
     def getValorCuota(self):
-        return ((self.__valorVH/self.__cantCuota)+self.__valorVH*0.10)
+        return (float(self.__valorVH)/int(self.__cantCuota))+float(self.__valorVH)*0.10
     
     def modificaPrecio(self, price):
         self.__valorVH = price
@@ -34,11 +31,21 @@ class PlanAhorro:
     def modificaCuotaPagar(self, nuevaC):
         self.__cantCuotaPaga=nuevaC
 
+    
     def MontoPagar(self):
-        return self.getValorCuota()*self.__cantCuotaPaga
-    '''
+        return self.getValorCuota()*int(self.__cantCuotaPaga)
+    
+    #METODOS DE CLASE
     @classmethod
-    def cuotas(cls,cuotas,licitar):
-        cls.__cantCuota=int(cuotas)
-        cls.__cantCuotaPaga=int(licitar)
-        '''
+    def cambiarCantCuota(cls, cc):
+        cls.__cantCuota=cc
+    
+    @classmethod
+    def cambiarCantCuotaPaga(cls, cp):
+        cls.__cantCuotaPaga=cp
+    
+    @classmethod
+    def getCuotaPagar(cls):
+        return cls.__cantCuotaPaga
+
+    

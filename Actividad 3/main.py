@@ -2,6 +2,7 @@
 import csv
 from ClaseRegistro import registro
 from menu import llamarMenu
+from os import path #visual
 
 if __name__== '__main__': 
     
@@ -12,7 +13,7 @@ if __name__== '__main__':
     for i in range(dia):
         lista.append([0]*hora)
     
-    archivo = open("temperaturas.csv")
+    archivo = open(path.dirname(__file__) + '/temperaturas.csv') #visual
     reader = csv.reader(archivo, delimiter=",")
     next(reader)
     for line in reader:
