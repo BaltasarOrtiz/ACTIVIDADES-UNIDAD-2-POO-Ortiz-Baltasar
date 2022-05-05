@@ -16,14 +16,13 @@ class cama:
         self.__diagnostico = diag
         self.__fechaInternacion = finter
         self.__fechaAlta = falta
-    
 
     def getIdCama(self):
         return self.__idCama
     
     def getNom(self):
         return self.__apellidoNombre
-    
+
     def getHab(self):
         return self.__habitacion
     
@@ -45,4 +44,4 @@ class cama:
     def setAlta(self, fecha):
         self.__fechaAlta = fecha
         self.__estado = False
-    
+

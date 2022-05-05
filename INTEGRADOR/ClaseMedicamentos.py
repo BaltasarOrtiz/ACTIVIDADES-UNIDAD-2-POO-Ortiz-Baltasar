@@ -8,7 +8,6 @@ class medicamento:
     __cantidadAplicada = int
     __precioTotal = float
 
-
     def __init__(self, idCam, idMedic, nomCom, monoDrog, presen, cantApli, preTot):
         self.__idCama = idCam
         self.__idMedicamento = idMedic
@@ -17,7 +16,6 @@ class medicamento:
         self.__presentacion = presen
         self.__cantidadAplicada = cantApli
         self.__precioTotal = preTot
-    
 
     def getIdCama(self):
         return self.__idCama

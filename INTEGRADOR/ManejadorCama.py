@@ -5,10 +5,9 @@ import os
 
 #clases y manejadores
 from ClaseCamas import cama
-from ManejadorMedicamento import ManejaMedicamento
 
 #arreglos
-from numpy import array, ndarray
+from numpy import ndarray
 import numpy as np
 
 
@@ -65,4 +64,3 @@ class ManejaCama:
             if elem.getDiag() == nombreDiag and elem.getFechaAlta() != 'None':
                 print("Id Cama: {}  Habitacion: {}  Estado: {}  Apellido y Nombre: {}".format(elem.getIdCama(), elem.getHab(), elem.getEstado(), elem.getNyA()))
                 print("Diagnostico: {}  Fecha de Internacion: {}    Fecha Alta: {}".format(elem.getDiag(), elem.getFechaInter(), elem.getFechaAlta()))
-            
