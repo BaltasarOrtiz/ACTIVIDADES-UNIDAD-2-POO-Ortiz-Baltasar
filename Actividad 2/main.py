@@ -2,7 +2,16 @@ import csv
 from ClaseViajeros import Viajero
 from menu import llamarMenu
 
+
+def test():
+    print("Test Realizado")
+    v = Viajero(134, 23897122, "Oscar", "Guevara", 4000)
+    print(v)
+
+
+
 if __name__== '__main__':
+    test()
     listaViajero = []
     archivo = open("ArchViajeros.csv")
     reader = csv.reader(archivo, delimiter=";")
